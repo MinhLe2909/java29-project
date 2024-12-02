@@ -9,11 +9,11 @@ CREATE TABLE Post (
     is_published BOOLEAN NOT NULL DEFAULT 0      
 );
 
-INSERT INTO Product (name, description, manufacturer, madein, unit_price, category)
+INSERT INTO Post (title, content, author, category, is_published)
 VALUES 
-    ('Ip 16 Pro Max','Chip Apple A18 Pro 6 nhân - RAM: 8 GB - Dung lượng: 256 GB','Apple','Vietnam',15000000,'Di động'),
-    ('Dell Inspiron 15 3520 i5 1235U','Intel Core i5 Alder Lake - 1235U','Dell','Vietnam',15000000,'Máy tính'),
-    ('Máy tính casio fx-580vn plus','Giải phương trình tuyến tính - Chức năng lượng giác','Casio','Vietnam',150000,'Dụng cụ học tập');
+    ('Kết quả thi đấu bóng đá AFF CUP','ĐTQG VIỆT NAM chiến thắng 2 - 0 THÁI LAN','Quang Huy','Sport',1),
+    ('Khóa học lập trình JAVA FULL STACK','Sẽ có 82 buổi học và sẽ gồm 5 modules','Techmaster','Technology',1),
+    ('Bản tin tài chính','Cập nhật tình hình giá vàng tuần này','Quỳnh Nga','Economy',1);
 
 
 CREATE TABLE Product (
@@ -28,8 +28,8 @@ CREATE TABLE Product (
 );
 
 
-INSERT INTO Post (title, content, author, category, is_published)
+INSERT INTO Product (name, description, manufacturer, madein, unit_price, category)
 VALUES 
-    ('Kết quả thi đấu bóng đá AFF CUP','ĐTQG VIỆT NAM chiến thắng 2 - 0 THÁI LAN','Quang Huy','Sport',1),
-    ('Khóa học lập trình JAVA FULL STACK','Sẽ có 82 buổi học và sẽ gồm 5 modules','Techmaster','Technology',1),
-    ('Bản tin tài chính','Cập nhật tình hình giá vàng tuần này','Quỳnh Nga','Economy',1);
+    ('Ip 16 Pro Max','Chip Apple A18 Pro 6 nhân - RAM: 8 GB - Dung lượng: 256 GB','Apple','Vietnam',15000000,'Di động'),
+    ('Dell Inspiron 15 3520 i5 1235U','Intel Core i5 Alder Lake - 1235U','Dell','Vietnam',15000000,'Máy tính'),
+    ('Máy tính casio fx-580vn plus','Giải phương trình tuyến tính - Chức năng lượng giác','Casio','Vietnam',150000,'Dụng cụ học tập');
