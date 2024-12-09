@@ -39,7 +39,7 @@ GROUP BY p.id, p.fullname;
 
 SELECT p.fullname, COUNT(po.id) AS post_count
 FROM Person p
-JOIN Post po ON p.id = po.authorId
+LEFT JOIN Post po ON p.id = po.authorId
 WHERE p.country = 'China'
 GROUP BY p.id, p.fullname;
 
@@ -49,7 +49,7 @@ GROUP BY p.id, p.fullname;
 SELECT p.fullname, COUNT(po.id) AS post_count
 FROM Person p
 JOIN Post po ON p.id = po.authorId
-WHERE p.hobbies LIKE '%Swimming%'
+WHERE p.hobbies = '%Swimming%'
   AND YEAR(po.createdAt) = 2023
 GROUP BY p.id, p.fullname;
 
