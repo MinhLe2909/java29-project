@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class Student {
+    public String fullName;
+    public int age;
+    public int GPA;
+
+    public Student(String fullName, int age, int GPA) {
+        this.fullName = fullName;
+        this.age = age;
+        this.GPA = GPA;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "fullName='" + fullName + '\'' + "\t" +
+                ", age=" + age + ", \t GPA=" + GPA + '}';
+    }
+
+    public static void main(String[] args) {
+        List<Student> students = new ArrayList<>();
+        students.add(new Student("Le Quang Minh", 30, 8));
+        students.add(new Student("Le Quang Minh", 30, 9));
+        students.add(new Student("Le Thi Hoa", 21, 9));
+        students.add(new Student("Pham Thi Mai", 19, 8));
+
+        // Sắp xếp theo tuổi tăng dần và theo GPA giảm dần
+        students.sort(Comparator.comparingInt(Student::getAge)
+                .thenComparing(Comparator.comparingInt(Student::getGPA).reversed()));
+
+        // In kết quả
+        students.forEach(System.out::println);
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getGPA() {
+        return GPA;
+    }
+}
